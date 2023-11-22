@@ -35,6 +35,7 @@ class Color(Enum):
 
 class Point(ABC):
 
+    @abstractmethod
     def __init__(self, x: int, y: int, color: Color):
         self._x = x
         self._y = y
@@ -106,8 +107,8 @@ class Sphere(Circle):
         return 4 * 3.1415 * self._r ** 2
 
 
-p = Point(10, 10, Color.RED)
-print(p)
+# p = Point(10, 10, Color.RED)
+# print(p)
 
 c = Circle(50, 50, 20, Color.BLUE)
 print(c)
